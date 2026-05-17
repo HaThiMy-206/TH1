@@ -318,3 +318,49 @@ a {
     object-fit: cover;
     display: block;
 }
+/* --- HOVER EFFECTS FOR PORTFOLIO --- */
+.portfolio-item img {
+    transition: transform 0.4s ease; /* Hiệu ứng mượt trong 0.4s đúng Spec */
+}
+
+/* Khi di chuột vào khối item, ảnh bên trong tự phóng to lên 1.1 lần */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Lớp phủ màu mờ đổ Gradient che lên ảnh khi hover */
+.portfolio-overlay {
+    position: absolute;
+    inset: 0;
+    /* Đổ màu Gradient từ tối ở đáy lên trong suốt ở đỉnh đúng Hint của thầy */
+    background: linear-gradient(
+        to top,
+        rgba(30, 41, 59, 0.95) 0%,
+        rgba(30, 41, 59, 0.6) 50%,
+        transparent 100
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Đẩy chữ xuống góc dưới cùng */
+    padding: 1.5rem;
+    opacity: 0; /* Mặc định ẩn đi */
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.portfolio-overlay h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.portfolio-overlay p {
+    color: var(--color-light);
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+/* Khi di chuột vào item thì lớp phủ hiện hình sắc nét lên */
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
