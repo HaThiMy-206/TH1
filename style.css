@@ -231,3 +231,33 @@ a {
     transition: width 1s ease-out; /* Đúng Spec: chuyển động mượt trong 1s */
     border-radius: 10px;
 }
+/* --- REFACTOR RESPONSIVE BREAKPOINTS (< 768px) --- */
+@media (max-width: 768px) {
+    /* Đưa khoảng cách container trên mobile nhỏ lại cho vừa vặn */
+    .container {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Biến cấu trúc 2 cột của About thành 1 cột xếp chồng (Chữ dưới, ảnh trên) */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    /* Thu nhỏ kích thước ảnh đại diện trên mobile đúng Spec: 200px */
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Biến cấu trúc 2 cột của Skills thành 1 cột chạy dọc từ trên xuống */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .skills-section h2, .about-section h2 {
+        font-size: 2rem; /* Hạ bớt cỡ chữ tiêu đề trên mobile cho đỡ thô */
+    }
+}
