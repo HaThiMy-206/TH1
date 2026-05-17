@@ -184,3 +184,50 @@ a {
     color: var(--color-text);
     margin-bottom: 1rem;
 }
+/* --- SKILLS SECTION STYLES --- */
+.skills-section {
+    background-color: var(--color-light); /* Đổi màu nền xám nhẹ cho đẹp mắt */
+}
+
+.skills-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Skills grid hiển thị 2 cột trên Desktop */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem 4rem; /* Khoảng cách hàng là 2rem, khoảng cách cột rộng rãi là 4rem */
+}
+
+.skill-item {
+    margin-bottom: 1rem;
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between; /* Đẩy tên kỹ năng sang trái, phần trăm sang phải */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--color-dark);
+}
+
+/* Khung bọc ngoài thanh tiến độ theo Spec thầy cho */
+.skill-bar {
+    background: #e2e8f0; /* Đúng Spec: màu #e2e8f0 */
+    border-radius: 10px;
+    height: 12px; /* Đúng Spec: cao 12px */
+    overflow: hidden; /* Cắt góc gọn gàng cho thanh chạy bên trong */
+}
+
+/* Thanh chạy tiến độ bên trong */
+.skill-progress {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary)); /* Đúng Spec: Gradient màu từ Indigo sang Purple */
+    height: 100%;
+    width: 0; /* Khởi tạo bằng 0 để tạo hiệu ứng chạy khi cuộn trang */
+    transition: width 1s ease-out; /* Đúng Spec: chuyển động mượt trong 1s */
+    border-radius: 10px;
+}
