@@ -126,3 +126,61 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+/* --- CONTAINER CHUNG CHO CÁC KHU VỰC --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem; /* Tạo khoảng cách trên dưới rộng rãi, thoáng đãng */
+}
+
+/* --- ABOUT SECTION STYLES --- */
+.about-section {
+    background-color: #ffffff; /* Để nền trắng cho phân biệt với Hero */
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Tạo Layout 2 cột bằng CSS Grid theo gợi ý của thầy */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Cột ảnh chiếm 1 phần, cột chữ chiếm 1.5 phần */
+    gap: 3rem; /* Khoảng cách giữa ảnh và chữ đúng 3rem */
+    align-items: center;
+}
+
+.about-image {
+    text-align: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%; /* Biến ảnh thành hình tròn (Circular) theo tiêu chí thành công */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.03); /* Hover nhẹ cho ảnh sinh động */
+}
+
+.about-content .lead {
+    font-size: 1.25rem;
+    font-weight: 300; /* Đúng Spec: lead text 1.25rem, weight 300 */
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-content p {
+    font-size: 1rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
