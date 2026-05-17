@@ -407,3 +407,103 @@ a {
     opacity: 1;
     visibility: visible;
 }
+/* --- CONTACT SECTION STYLES --- */
+.contact-section {
+    background-color: var(--color-light); /* Màu nền xám nhạt */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: var(--color-dark);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Tạo layout 2 cột cho phần Contact trên Desktop */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Info 1 phần, Form rộng hơn 1.5 phần */
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h3 {
+    font-size: 1.75rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--color-text);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+}
+
+/* Định dạng các ô nhập liệu theo đúng thiết kế của thầy */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e2e8f0; /* Viền xám mặc định đúng Spec */
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+}
+
+textarea {
+    resize: vertical; /* Cho phép co giãn chiều dọc đúng Hint */
+    min-height: 120px;
+}
+
+/* Hiệu ứng khi người dùng click chuột vào ô (Focus) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); /* Hiệu ứng bóng đổ nhẹ quanh ô */
+}
+
+/* NÚT SUBMIT GỬI TIN NHẮN */
+.submit-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px); /* Nhấc nhẹ nút lên khi di chuột */
+}
