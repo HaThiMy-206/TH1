@@ -364,3 +364,46 @@ a {
 .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
 }
+/* --- CSS-ONLY LIGHTBOX STYLES --- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95); /* Nền đen mờ 95% phủ kín màn hình đúng Spec */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 2000; /* Đảm bảo đè lên trên tất cả mọi thứ */
+    padding: 2rem;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* Nút bấm đóng hình chữ X màu trắng xinh xắn */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+    color: var(--color-secondary); /* Hover đổi màu cho xịn */
+}
+
+/* ẢO THUẬT: Khi bấm vào ảnh, URL trên trình duyệt đổi thành #lightbox-X, kích hoạt đoạn CSS này hiện hình lên */
+.lightbox:target {
+    opacity: 1;
+    visibility: visible;
+}
