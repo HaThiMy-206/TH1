@@ -714,3 +714,23 @@ textarea {
 .btn-link:hover {
     color: #0a58ca !important;
 }
+/* ========================================================== */
+/* BÀI THỰC HÀNH 2.4 - PHẦN 2: CUSTOM SPACING SCALE           */
+/* ========================================================== */
+
+/* Tạo class giãn cách khoảng cách lớn cho các section (5rem = 80px) */
+.py-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Custom gap rộng rãi hơn cho các khung ô lưới */
+.gap-4 {
+    gap: 2rem !important;
+}
+
+/* Áp dụng class py-section mới cho phần Blog để giao diện thông thoáng */
+#blog {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
